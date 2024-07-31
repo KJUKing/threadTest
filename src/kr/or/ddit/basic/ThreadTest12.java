@@ -57,13 +57,17 @@ class Horse extends Thread implements Comparable<Horse> {
     private String horseName;
     private int grade; //순위
     private int position;
-    private static int currentRank = 1;
+    private int currentRank = 1;
     private int trackLength = 50;
 
 
     public Horse(String name) {
         this.horseName = name;
         this.position = 0; //그냥 0으로 초기화해서 오류나는거방지
+    }
+
+    public int getCurrentRank() {
+        return currentRank;
     }
 
     public int getGrade() {
